@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar" >
+            <img src="logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE <br>REAL<br> SOUND</h1>
+    
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="play.png" alt="play" id='icon'>
+                
+            </div>
+        </div>
+    </div>
+    <audio src="song.mp3" type="audio/mp3" id="mySong"></audio>
+
+    <script>
+        var mySong=document.getElementById('mySong');
+        var icon=document.getElementById('icon');
+        icon.onclick=function(){
+                mySong.play();
+                document.getElementById('icon').src='pause.png';
+            }
+            icon.ondblclick=function(){
+                mySong.pause();
+                document.getElementById('icon').src='play.png';
+        }
+        
+
+    </script>
+    
+</body>
+</html>
